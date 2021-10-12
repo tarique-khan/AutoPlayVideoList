@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:elevation="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clVideoListItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/ivVideoThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_view_height"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPlayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            app:layout_constraintBottom_toBottomOf="@id/ivVideoThumbnail"
+            app:layout_constraintEnd_toEndOf="@id/ivVideoThumbnail"
+            app:layout_constraintStart_toStartOf="@id/ivVideoThumbnail"
+            app:layout_constraintTop_toTopOf="@id/ivVideoThumbnail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/video_duration_background"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:id="@+id/tvVideoDuration"
+            android:paddingBottom="4dp"
+            android:visibility="gone"
+            android:text="@string/duration_text"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivVideoThumbnail"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pbVideoLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivVideoThumbnail"
+            app:layout_constraintEnd_toEndOf="@id/ivVideoThumbnail"
+            app:layout_constraintStart_toStartOf="@id/ivVideoThumbnail"
+            app:layout_constraintTop_toTopOf="@id/ivVideoThumbnail" />
+
+        <TextView
+            android:id="@+id/tvVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="2"
+            android:textColor="@color/text_primary_color"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/ivVideoThumbnail" />
+
+        <TextView
+            android:id="@+id/tvVideoSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="3"
+            android:textColor="@color/text_secondary_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvVideoTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
